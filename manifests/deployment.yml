@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: bmarch07iamgesaks 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bmarch07iamgesaks
+  template:
+    metadata:
+      labels:
+        app: bmarch07iamgesaks 
+    spec:
+      containers:
+        - name: bmarch07iamgesaks 
+          image: march06contreg.azurecr.io/bmarch07iamgesaks
+          ports:
+          - containerPort: 80
